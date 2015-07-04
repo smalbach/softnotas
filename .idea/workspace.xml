@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5368899" vertical-offset="717" max-vertical-offset="1598">
-              <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+              <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -218,7 +218,7 @@
     <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5368899" vertical-offset="717" max-vertical-offset="1598">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+          <caret line="70" column="75" selection-start-line="70" selection-start-column="75" selection-end-line="70" selection-end-column="75" />
           <folding />
         </state>
       </provider>
