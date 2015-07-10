@@ -1,0 +1,16 @@
+.container{
+    background: #fff;
+    margin-top: 50px;
+    -webkit-box-shadow: -2px 0px 9px 1px rgba(130,126,130,0.71);
+    -moz-box-shadow: -2px 0px 9px 1px rgba(130,126,130,0.71);
+    box-shadow: -2px 0px 9px 1px rgba(130,126,130,0.71);
+    border-radius: 10px;
+
+}
+
+.contenedor{
+    background: #2c3e50;
+    color: #fff;
+    border-radius: 10px;
+
+}
