@@ -7,10 +7,31 @@ class estudiantes_model extends CI_Controller
         parent::__construct();
     }
 
-    function crearprofesores($data){
-        return $this->db->insert('estudiant',$data);
+    function crearestudiante($data){
+        return $this->db->insert('estudiantes',$data);
 
     }
+
+
+    function buscarestudiante($identificacion){
+
+        $query = $this->db->query("SELECT *  FROM estudiantes WHERE identificacion='$identificacion'");
+
+        if($query->num_rows()>0){
+
+            foreach ($query->result_array() as $row){
+
+                $data[]=$row;
+            }
+
+        }else{
+            return false;
+        }
+        return  $data;
+
+    }
+
+
 
 }
 ?>

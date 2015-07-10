@@ -215,6 +215,42 @@
     $(document).ready(function ({}) {
 
 
+        $("#identificacion").blur(function(){
+            existeProfesor()
+        })
+
+        function existeProfesor(){
+
+            $.ajax({
+                url: "buscar/"+$("#identificacion").val(),
+                type: 'POST',
+                data: "",
+                dataType: 'json',
+                success: function(data){
+                    if(data){
+                        setProfesor(data)
+                    }
+                },
+                error: function(){
+                    alert("Error")
+                }
+            })
+
+        }
+
+        function setProfesor(data){
+            keys=data.reduce(function(keys, element){
+                for (key in element) {
+                    keys.push(key);
+                    $("#"+key).val(element[key])
+
+
+                }
+            },[]);
+
+        }
+
+
         $("#fecha_nacimiento").datepicker({
             changeMonth: true,
             changeYear: true,

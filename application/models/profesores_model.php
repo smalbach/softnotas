@@ -12,5 +12,23 @@ class profesores_model extends CI_Controller
 
     }
 
+    function buscarprofesor($identificacion){
+
+        $query = $this->db->query("SELECT *  FROM profesores WHERE identificacion='$identificacion'");
+
+        if($query->num_rows()>0){
+
+            foreach ($query->result_array() as $row){
+
+                $data[]=$row;
+            }
+
+        }else{
+            return false;
+        }
+        return  $data;
+
+    }
+
 }
 ?>

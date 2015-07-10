@@ -29,6 +29,13 @@ class profesores extends CI_Controller {
         $this->load->view('includes/tpl_admin',$data);
     }
 
+    function buscar(){
+        $identificacion = $this->uri->segment(3) ;
+        header('Content-Type: application/json');
+        echo json_encode($this->profesores_model->buscarprofesor($identificacion));
+
+    }
+
     function guardar(){
         if($this->input->is_ajax_request()){
             $data = array(

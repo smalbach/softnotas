@@ -11,7 +11,7 @@
 
 
         <div class="row">
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-10 col-md-6">
                 <label>Identificación</label>
                 <label for="identificacion"></label>
                 <input
@@ -22,6 +22,13 @@
                     data-rule-required="true"
                     >
             </div>
+
+            <div class="col-xs-2">
+                <button type="button" class="btn btn-info" id="buscar">
+                    <!--Aqui ba el icono de una lupa lodejo a tu eleccion--> ...
+                </button>
+            </div>
+
             <div class="col-xs-12 col-md-6">
                 <label>Expedición</label>
                 <label for="expedicion"></label>
@@ -169,6 +176,42 @@
     $(document).ready(function ({}) {
 
 
+        $("#identificacion").blur(function(){
+            existeEstudiante()
+        })
+
+        function existeEstudiante(){
+
+            $.ajax({
+                url: "buscar/"+$("#identificacion").val(),
+                type: 'POST',
+                data: "",
+                dataType: 'json',
+                success: function(data){
+                    if(data){
+                        setEstudiante(data)
+                    }
+                },
+                error: function(){
+                    alert("Error")
+                }
+            })
+
+        }
+
+        function setEstudiante(data){
+            keys=data.reduce(function(keys, element){
+                for (key in element) {
+                    keys.push(key);
+                    $("#"+key).val(element[key])
+
+
+                }
+            },[]);
+
+        }
+
+
         $("#fecha_nacimiento").datepicker({
             changeMonth: true,
             changeYear: true,
@@ -202,6 +245,7 @@
         });
 
     })
+
 
 </script>
 
