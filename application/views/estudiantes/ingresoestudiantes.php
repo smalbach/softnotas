@@ -11,7 +11,7 @@
 
 
         <div class="row">
-            <div class="col-xs-10 col-md-6">
+            <div class="col-xs-12 col-md-6">
                 <label>Identificación</label>
                 <label for="identificacion"></label>
                 <input
@@ -22,13 +22,6 @@
                     data-rule-required="true"
                     >
             </div>
-
-            <div class="col-xs-2">
-                <button type="button" class="btn btn-info" id="buscar">
-                    <!--Aqui ba el icono de una lupa lodejo a tu eleccion--> ...
-                </button>
-            </div>
-
             <div class="col-xs-12 col-md-6">
                 <label>Expedición</label>
                 <label for="expedicion"></label>
@@ -219,6 +212,13 @@
             dateFormat: "yy/mm/dd"
         });
 
+        $("#fech_ingreso").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1900:{{Date('Y')}}",
+            dateFormat: "yy/mm/dd"
+        });
+
 
         $("#ingresoestudiantes").validate({
             submitHandler: function(form){
@@ -246,9 +246,7 @@
 
     })
 
-
 </script>
-
 
 
 
