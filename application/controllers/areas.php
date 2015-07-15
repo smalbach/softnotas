@@ -30,9 +30,16 @@ class areas extends CI_Controller {
     }
 
     function buscar(){
-        $area = $this->uri->segment(3) ;
+        $area = $_GET['area'];
         header('Content-Type: application/json');
         echo json_encode($this->areas_model->buscararea($area));
+
+    }
+
+    function buscar2(){
+        $area2 = $_POST['area'];
+        header('Content-Type: application/json');
+        echo json_encode($this->areas_model->buscararea2($area2));
 
     }
 

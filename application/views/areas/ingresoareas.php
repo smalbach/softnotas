@@ -49,40 +49,25 @@
     $(document).ready(function ({}) {
 
 
-        $("#area").blur(function(){
-           existeArea()
-        })
+        $( "#area" ).autocomplete({
+            source: '<?php  echo base_url() ?>index.php/areas/buscar',
+            data:'',
+            minLength: 2
+        });
 
-        function existeArea(){
-
+        $("#area").focusout(function(){
             $.ajax({
-                url: "buscar/"+$("#area").val(),
-                type: 'POST',
-                data: "",
-                dataType: 'json',
-                success: function(data){
-                    if(data){
-                        setArea(data)
-                    }
-                },
-                error: function(){
-                    alert("Error")
-                }
-            })
-
-        }
-
-        function setArea(data){
-            keys=data.reduce(function(keys, element){
-                for (key in element) {
-                    keys.push(key);
-                    $("#"+key).val(element[key])
+                url:'<?php  echo base_url() ?>index.php/areas/buscar2',
+                type:'POST',
+                dataType:'json',
+                data:{ area:$('#area')}
+            }).done(function(respuesta){
+                $("#area").val(respuesta.area);
+                $("#detalle").val(respuesta.detalle);
+            });
+        });
 
 
-                }
-            },[]);
-
-        }
 
 
         $("#ingresoareas").validate({
