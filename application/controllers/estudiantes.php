@@ -23,16 +23,23 @@ class estudiantes extends CI_Controller {
 
     }
 
-    function ingresoestudiantes(){
+    function ingresar(){
         $data["ses"]=$this->ses;
-        $data["body"]='estudiantes/ingresoestudiantes';
+        $data["body"]='estudiantes/ingresar';
         $this->load->view('includes/tpl_admin',$data);
     }
 
     function buscar(){
-        $identificacion = $this->uri->segment(3) ;
+        $identificacion = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->estudiantes_model->buscarestudiante($identificacion));
+        echo json_encode($this->estudiantes_model->buscar($identificacion));
+
+    }
+
+    function buscar2(){
+        $identificacion2 = $this->input->get('id');
+        header('Content-Type: application/json');
+        echo json_encode($this->estudiantes_model->buscar2($identificacion2));
 
     }
 
@@ -40,32 +47,21 @@ class estudiantes extends CI_Controller {
         if($this->input->is_ajax_request()){
             $data = array(
                 'identificacion' =>$this->input->post('identificacion'),
-                'expedicion' =>$this->input->post('expedicion'),
                 'nombres' =>$this->input->post('nombres'),
                 'apellidos' =>$this->input->post('apellidos'),
                 'sexo' =>$this->input->post('sexo'),
                 'fecha_nacimiento' =>$this->input->post('fecha_nacimiento'),
                 'direccion' =>$this->input->post('direccion'),
-                'telefono' =>$this->input->post('telefono'),
-                'alergias' =>$this->input->post('alergias'),
-                'eps' =>$this->input->post('eps'),
-                'peso' =>$this->input->post('peso'),
-                'rh' =>$this->input->post('rh')
+                'telefono' =>$this->input->post('telefono')
             );
             header('Content-Type: application/json');
-            echo json_encode($this->estudiantes_model->crearestudiante($data));
-
-
+            echo json_encode($this->estudiantes_model->guardar($data));
 
         }else{
-
-
         }
-
-
-
-
     }
+
 }
+
 
 ?>
