@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class profesores extends CI_Controller {
+class cordinadores extends CI_Controller {
     var $ses;
     function __construct(){
          parent::__construct();
 
-         $this->load->model('profesores_model');
+         $this->load->model('cordinadores_model');
          $newdata = array(
             'usuario'  => 'Jose TRuñon',
             'email'     => 'johndoe@some-site.com',
@@ -25,38 +25,46 @@ class profesores extends CI_Controller {
 
     function ingresar(){
         $data["ses"]=$this->ses;
-        $data["body"]='profesores/ingresar';
+        $data["body"]='cordinadores/ingresar';
         $this->load->view('includes/tpl_admin',$data);
     }
 
-    function buscar(){
+    function buscarprofesor(){
         $identificacion = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->profesores_model->buscar($identificacion));
+        echo json_encode($this->cordinadores_model->buscarprofesor($identificacion));
 
     }
 
-    function buscar2(){
+    function buscarprofesor2(){
         $identificacion2 = $this->input->get('id');
         header('Content-Type: application/json');
-        echo json_encode($this->profesores_model->buscar2($identificacion2));
+        echo json_encode($this->cordinadores_model->buscarprofesor2($identificacion2));
+
+    }
+
+    function buscarcurso(){
+        $curso = $this->input->get('term');
+        header('Content-Type: application/json');
+        echo json_encode($this->cordinadores_model->buscarcurso($curso));
+
+    }
+
+    function buscarcurso2(){
+        $curso2 = $this->input->get('id');
+        header('Content-Type: application/json');
+        echo json_encode($this->cordinadores_model->buscarcurso2($curso2));
 
     }
 
     function guardar(){
         if($this->input->is_ajax_request()){
             $data = array(
-                'identificacion' =>$this->input->post('identificacion'),
-                'tipo_identificacion' =>$this->input->post('tipo_identificacion'),
-                'nombres' =>$this->input->post('nombres'),
-                'apellidos' =>$this->input->post('apellidos'),
-                'sexo' =>$this->input->post('sexo'),
-                'fecha_nacimiento' =>$this->input->post('fecha_nacimiento'),
-                'direccion' =>$this->input->post('direccion'),
-                'telefono' =>$this->input->post('telefono')
+                'curso_id' =>$this->input->post('curso_id'),
+                'profesor_id' =>$this->input->post('profesor_id')
             );
             header('Content-Type: application/json');
-            echo json_encode($this->profesores_model->guardar($data));
+            echo json_encode($this->cordinadores_model->guardar($data));
 
         }else{
         }

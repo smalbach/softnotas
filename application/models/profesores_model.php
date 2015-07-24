@@ -1,20 +1,27 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class profesores_model extends CI_Controller
-{
+class profesores_model extends CI_Controller{
+
     function __construct(){
         parent::__construct();
+
     }
 
-    function crearprofesores($data){
+    function guardar($data){
+
         return $this->db->insert('profesores',$data);
 
     }
 
-    function buscarprofesor($identificacion){
 
-        $query = $this->db->query("SELECT *  FROM profesores WHERE identificacion='$identificacion'");
+
+
+    function buscar($identificacion){
+
+
+        $query = $this->db->query("SELECT profesor_id, identificacion as label , identificacion as value FROM profesores WHERE identificacion LIKE '%$identificacion%'");
+
 
         if($query->num_rows()>0){
 
@@ -26,9 +33,40 @@ class profesores_model extends CI_Controller
         }else{
             return false;
         }
-        return  $data;
 
+        return  $data;
     }
+
+    function buscar2($identificacion2){
+
+        $query = $this->db->query("SELECT profesor_id, tipo_identificacion, nombres, apellidos, sexo, fecha_nacimiento, telefono, direccion FROM profesores WHERE profesor_id = '$identificacion2'");
+
+
+        if($query->num_rows()>0){
+
+            $profesor = new stdClass();
+
+            foreach ($query->result_array() as $row){
+
+                $profesor->tipo_identificacion = $row['tipo_identificacion'];
+                $profesor->nombres = $row['nombres'];
+                $profesor->apellidos = $row['apellidos'];
+                $profesor->sexo = $row['sexo'];
+                $profesor->fecha_nacimiento = $row['fecha_nacimiento'];
+                $profesor->telefono = $row['telefono'];
+                $profesor->direccion = $row['direccion'];
+
+            }
+
+        }else{
+
+            return false;
+
+        }
+
+        return  $profesor;
+    }
+
 
 }
 ?>

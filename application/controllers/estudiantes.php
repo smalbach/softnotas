@@ -47,6 +47,7 @@ class estudiantes extends CI_Controller {
         if($this->input->is_ajax_request()){
             $data = array(
                 'identificacion' =>$this->input->post('identificacion'),
+                'tipo_identificacion' =>$this->input->post('tipo_identificacion'),
                 'nombres' =>$this->input->post('nombres'),
                 'apellidos' =>$this->input->post('apellidos'),
                 'sexo' =>$this->input->post('sexo'),

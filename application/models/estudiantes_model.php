@@ -39,7 +39,7 @@ class estudiantes_model extends CI_Controller{
 
     function buscar2($identificacion2){
 
-        $query = $this->db->query("SELECT estudiante_id, nombres, apellidos, sexo, fecha_nacimiento, telefono, direccion FROM estudiantes WHERE estudiante_id = '$identificacion2'");
+        $query = $this->db->query("SELECT estudiante_id, tipo_identificacion, nombres, apellidos, sexo, fecha_nacimiento, telefono, direccion FROM estudiantes WHERE estudiante_id = '$identificacion2'");
 
 
         if($query->num_rows()>0){
@@ -48,6 +48,7 @@ class estudiantes_model extends CI_Controller{
 
             foreach ($query->result_array() as $row){
 
+                $estudiante->tipo_identificacion = $row['tipo_identificacion'];
                 $estudiante->nombres = $row['nombres'];
                 $estudiante->apellidos = $row['apellidos'];
                 $estudiante->sexo = $row['sexo'];

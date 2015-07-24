@@ -1,11 +1,11 @@
 
 <header>
     <div class="contenedor">
-        <h1><p><i>Datos del estudiante</i></p></h1>
+        <h1><p><i>Datos del profesor</i></p></h1>
     </div>
 </header>
 <form
-    id="ingresoestudiantes"
+    id="ingresoprofesores"
     >
 
         <div class="row">
@@ -127,26 +127,26 @@
 
 
         $( "#identificacion" ).autocomplete({
-            source: "<?php  echo base_url() ?>index.php/estudiantes/buscar",
+            source: "<?php  echo base_url() ?>index.php/profesores/buscar",
             minLength: 2,
             select: function( event, ui ) {
-                buscardatos(ui.item.estudiante_id)
+                buscardatos(ui.item.profesor_id)
             }
         });
 
         function buscardatos(id) {
             $.ajax({
                 type: "GET",
-                url: "<?php  echo base_url() ?>index.php/estudiantes/buscar2?id=" + id,
+                url: "<?php  echo base_url() ?>index.php/profesores/buscar2?id=" + id,
                 dataType: 'json'
-            }).done(function (estudiante) {
-                $("#tipo_identificacion").val(estudiante.tipo_identificacion);
-                $("#nombres").val(estudiante.nombres);
-                $("#apellidos").val(estudiante.apellidos);
-                $("#sexo").val(estudiante.sexo);
-                $("#fecha_nacimiento").val(estudiante.fecha_nacimiento);
-                $("#telefono").val(estudiante.telefono);
-                $("#direccion").val(estudiante.direccion);
+            }).done(function (profesor) {
+                $("#tipo_identificacion").val(profesor.tipo_identificacion);
+                $("#nombres").val(profesor.nombres);
+                $("#apellidos").val(profesor.apellidos);
+                $("#sexo").val(profesor.sexo);
+                $("#fecha_nacimiento").val(profesor.fecha_nacimiento);
+                $("#telefono").val(profesor.telefono);
+                $("#direccion").val(profesor.direccion);
             });
         }
 
@@ -159,21 +159,21 @@
         });
 
 
-        $("#ingresoestudiantes").validate({
+        $("#ingresoprofesores").validate({
             submitHandler: function(form){
-                datosFormulario=$("#ingresoestudiantes").serialize();
+                datosFormulario=$("#ingresoprofesores").serialize();
 
                 $.ajax({
                     type: "POST",
-                    url:"<?php  echo base_url() ?>index.php/estudiantes/guardar",
+                    url:"<?php  echo base_url() ?>index.php/profesores/guardar",
                     data:datosFormulario,
                     dataType: 'json',
                     async:false,
                     success: function (data) {
-                        alert("El estudiante se registro correctamente");
+                        alert("El profesor se registro correctamente");
                     },
                     error: function(data){
-                        alert("Error al registrar estudiante");
+                        alert("Error al registrar profesor");
                     }
 
 
