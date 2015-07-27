@@ -130,7 +130,7 @@
             source: "<?php  echo base_url() ?>index.php/estudiantes/buscar",
             minLength: 2,
             select: function( event, ui ) {
-                buscardatos(ui.item.estudiante_id)
+                buscardatos(ui.item.id)
             }
         });
 

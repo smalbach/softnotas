@@ -26,41 +26,68 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="ingresar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/cordinadores/ingresar.php">
+        <entry file="file://$PROJECT_DIR$/application/views/inscripciones/ingresar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="3026">
-              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="45" />
+            <state vertical-scroll-proportion="-10.963636" vertical-offset="2491" max-vertical-offset="3876">
+              <caret line="182" column="28" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ingresar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/cursos/ingresar.php">
+      <file leaf-file-name="guardaractivo.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Mis programas/datagas/guardaractivo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="1870">
-              <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+            <state vertical-scroll-proportion="-17.807692" vertical-offset="47" max-vertical-offset="1938">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ingresar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/estudiantes/ingresar.php">
+      <file leaf-file-name="consultaordencorrectiva.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Mis programas/datagas/consultaordencorrectiva.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="3400">
-              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+            <state vertical-scroll-proportion="-15.038462" vertical-offset="765" max-vertical-offset="2890">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="80" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ingresar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/profesores/ingresar.php">
+      <file leaf-file-name="pagination_data5.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Mis programas/datagas/pagination_data5.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.058553386" vertical-offset="0" max-vertical-offset="3400">
-              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1428">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding>
+                <marker date="1412208092000" expanded="true" signature="838:923" placeholder="select COD_M..mantenimientos..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inscripciones.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/inscripciones.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.038462" vertical-offset="506" max-vertical-offset="1428">
+              <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inscripciones_model.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/inscripciones_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29276693" vertical-offset="969" max-vertical-offset="2142">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding>
+                <marker date="1437952701773" expanded="true" signature="402:545" placeholder="SELECT id, i..." />
+                <marker date="1437952701773" expanded="true" signature="858:934" placeholder="SELECT id, n..estudiantes..." />
+                <marker date="1437952701773" expanded="true" signature="1399:1529" placeholder="SELECT g.id ..." />
+                <marker date="1437952701773" expanded="true" signature="1827:1989" placeholder="SELECT g.id ..grupos..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,20 +121,28 @@
         <option value="$PROJECT_DIR$/application/views/areas/ingresoareas.php" />
         <option value="$PROJECT_DIR$/application/models/areas_model.php" />
         <option value="$PROJECT_DIR$/application/views/estudiantes/ingresoestudiantes.php" />
-        <option value="$PROJECT_DIR$/application/controllers/estudiantes.php" />
-        <option value="$PROJECT_DIR$/application/models/estudiantes_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/profesores.php" />
-        <option value="$PROJECT_DIR$/application/models/profesores_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/cursos.php" />
-        <option value="$PROJECT_DIR$/application/models/cursos_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/coordinadores.php" />
         <option value="$PROJECT_DIR$/application/views/coordinadores/ingresar.php" />
-        <option value="$PROJECT_DIR$/application/models/cordinadores_model.php" />
-        <option value="$PROJECT_DIR$/application/controllers/cordinadores.php" />
-        <option value="$PROJECT_DIR$/application/views/cordinadores/ingresar.php" />
-        <option value="$PROJECT_DIR$/application/views/cursos/ingresar.php" />
-        <option value="$PROJECT_DIR$/application/views/estudiantes/ingresar.php" />
         <option value="$PROJECT_DIR$/application/views/profesores/ingresar.php" />
+        <option value="$PROJECT_DIR$/application/models/profesores_model.php" />
+        <option value="$PROJECT_DIR$/application/views/cursos/ingresar.php" />
+        <option value="$PROJECT_DIR$/application/models/cursos_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/cordinadores.php" />
+        <option value="$PROJECT_DIR$/application/models/cordinadores_model.php" />
+        <option value="$PROJECT_DIR$/application/models/estudiantes_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/estudiantes.php" />
+        <option value="$PROJECT_DIR$/application/views/cordinadores/ingresar.php" />
+        <option value="$PROJECT_DIR$/application/views/estudiantes/ingresar.php" />
+        <option value="$PROJECT_DIR$/application/models/grupos_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/grupos.php" />
+        <option value="$PROJECT_DIR$/application/views/grupos/ingresar.php" />
+        <option value="$PROJECT_DIR$/application/views/estudiantes/estudiantes_curso.php" />
+        <option value="$PROJECT_DIR$/application/views/inscripcion/ingresar.php" />
+        <option value="$PROJECT_DIR$/application/models/inscripciones_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/inscripciones.php" />
+        <option value="$PROJECT_DIR$/application/views/inscripciones/ingresar.php" />
       </list>
     </option>
   </component>
@@ -160,6 +195,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -288,7 +324,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -320,9 +355,6 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -330,6 +362,9 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -348,7 +383,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -357,19 +392,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15138593" sideWeight="0.49945945" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15618336" sideWeight="0.49945945" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.50054055" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864866" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -395,76 +430,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07718502" vertical-offset="0" max-vertical-offset="881">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../motokov/application/views/empleados/empleados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../motokov/application/views/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../motokov/application/views/includes/tpl_usuarios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="920">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../motokov/application/controllers/venta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6275168" vertical-offset="0" max-vertical-offset="6358">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Mis programas/laplaya/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7606264" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.76923" vertical-offset="387" max-vertical-offset="1258">
-          <caret line="53" column="39" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-149.07692" vertical-offset="0" max-vertical-offset="6290">
-          <caret line="228" column="59" selection-start-line="228" selection-start-column="59" selection-end-line="228" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.07347876" vertical-offset="1186" max-vertical-offset="2057">
-          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
@@ -661,21 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/estudiantes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5510907" vertical-offset="353" max-vertical-offset="1241">
-          <caret line="49" column="82" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/estudiantes_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70264065" vertical-offset="238" max-vertical-offset="1309">
-          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
-          <caret line="50" column="76" selection-start-line="50" selection-start-column="76" selection-end-line="50" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/profesores.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.858783" vertical-offset="0" max-vertical-offset="1241">
@@ -687,79 +637,211 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1139">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/profesores_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9804822" vertical-offset="285" max-vertical-offset="1309">
-          <caret line="67" column="5" selection-start-line="19" selection-start-column="0" selection-end-line="67" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="-15.846154" vertical-offset="285" max-vertical-offset="1309">
+          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <caret line="41" column="155" selection-start-line="41" selection-start-column="155" selection-end-line="41" selection-end-column="155" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/cursos_model.php">
+    <entry file="file://$PROJECT_DIR$/application/views/cursos/ingresar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15614237" vertical-offset="272" max-vertical-offset="1258">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3903559" vertical-offset="612" max-vertical-offset="1870">
+          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/profesores/ingresar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="867" max-vertical-offset="3400">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="74" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/estudiantes_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="1309">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1437675813923" expanded="true" signature="-1:-1" placeholder="SELECT curso..." />
-            <marker date="1437675813923" expanded="true" signature="-1:-1" placeholder="SELECT curso..cursos..." />
+            <marker date="1437853541504" expanded="true" signature="-1:-1" placeholder="SELECT id, i..." />
+            <marker date="1437853541504" expanded="true" signature="-1:-1" placeholder="SELECT id, t..estudiantes..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/cordinadores.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5901263" vertical-offset="506" max-vertical-offset="1377">
-          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+        <state vertical-scroll-proportion="-17.5" vertical-offset="480" max-vertical-offset="1377">
+          <caret line="55" column="64" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/cordinadores_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23421355" vertical-offset="0" max-vertical-offset="2057">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state vertical-scroll-proportion="-0.8002296" vertical-offset="1156" max-vertical-offset="2125">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding>
-            <marker date="1437694842307" expanded="true" signature="-1:-1" placeholder="SELECT profe..." />
-            <marker date="1437694842307" expanded="true" signature="-1:-1" placeholder="SELECT profe..profesores..." />
-            <marker date="1437694842307" expanded="true" signature="-1:-1" placeholder="SELECT curso..." />
-            <marker date="1437694842307" expanded="true" signature="-1:-1" placeholder="SELECT curso..cursos..." />
+            <marker date="1437851149358" expanded="true" signature="-1:-1" placeholder="SELECT id, i..." />
+            <marker date="1437851149358" expanded="true" signature="-1:-1" placeholder="SELECT id, n..profesores..." />
+            <marker date="1437851149358" expanded="true" signature="-1:-1" placeholder="SELECT g.id ..." />
+            <marker date="1437851149358" expanded="true" signature="-1:-1" placeholder="SELECT g.id ..grupos..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/cordinadores/ingresar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="3026">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.019517796" vertical-offset="34" max-vertical-offset="2992">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/cursos/ingresar.php">
+    <entry file="file://$PROJECT_DIR$/application/models/cursos_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="34" max-vertical-offset="1870">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.3857635" vertical-offset="106" max-vertical-offset="1258">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1437770661371" expanded="true" signature="-1:-1" placeholder="SELECT id, n..." />
+            <marker date="1437770661371" expanded="true" signature="-1:-1" placeholder="SELECT id, n..cursos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/grupos_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-71.92308" vertical-offset="0" max-vertical-offset="3009">
+          <caret line="110" column="25" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
+          <folding>
+            <marker date="1437940317017" expanded="true" signature="-1:-1" placeholder="SELECT id, i..." />
+            <marker date="1437940317017" expanded="true" signature="-1:-1" placeholder="SELECT id, n..cursos..." />
+            <marker date="1437940317017" expanded="true" signature="-1:-1" placeholder="SELECT g.id ..." />
+            <marker date="1437940317017" expanded="true" signature="-1:-1" placeholder="SELECT id, j..jornadas..." />
+            <marker date="1437940317017" expanded="true" signature="-1:-1" placeholder="SELECT id, j..." />
+            <marker date="1437940317017" expanded="true" signature="-1:-1" placeholder="SELECT id, j..jornadas..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/grupos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.038462" vertical-offset="778" max-vertical-offset="1683">
+          <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+          <caret line="81" column="51" selection-start-line="81" selection-start-column="51" selection-end-line="81" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/grupos/ingresar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0" vertical-offset="1071" max-vertical-offset="3587">
+          <caret line="89" column="28" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/estudiantes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56142366" vertical-offset="310" max-vertical-offset="1241">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/estudiantes/ingresar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="3400">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.27324915" vertical-offset="1836" max-vertical-offset="3400">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/profesores/ingresar.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/inscripciones.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.058553386" vertical-offset="0" max-vertical-offset="3400">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        <state vertical-scroll-proportion="-23.038462" vertical-offset="506" max-vertical-offset="1428">
+          <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/pagos/prestamoo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23776224" vertical-offset="4539" max-vertical-offset="5627">
+          <caret line="281" column="57" selection-start-line="281" selection-start-column="57" selection-end-line="281" selection-end-column="79" />
+          <folding>
+            <marker date="1381424740964" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..COBRO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/pagos/ingresarpagos2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8846154" vertical-offset="4735" max-vertical-offset="5950">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="57" selection-end-column="1" />
+          <folding>
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="insert into ..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="update PREST..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="SELECT COD_P..PAGOS..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="UPDATE PAGOS..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="SELECT NUM_I..PRESTAMO..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="UPDATE CLIEN..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="SELECT COD_P..PRESTAMO..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="UPDATE PREST..." />
+            <marker date="1381353488708" expanded="true" signature="-1:-1" placeholder="SELECT SUM(T..TEMPORAL_PRESTAMO..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/datagas/guardaractivo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.807692" vertical-offset="47" max-vertical-offset="1938">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/datagas/pagination_data5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <marker date="1412208092000" expanded="true" signature="838:923" placeholder="select COD_M..mantenimientos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/datagas/consultaordencorrectiva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462" vertical-offset="765" max-vertical-offset="2890">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="80" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/inscripciones/ingresar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.963636" vertical-offset="2491" max-vertical-offset="3876">
+          <caret line="182" column="28" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/inscripciones_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29276693" vertical-offset="969" max-vertical-offset="2142">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <marker date="1437952701773" expanded="true" signature="402:545" placeholder="SELECT id, i..." />
+            <marker date="1437952701773" expanded="true" signature="858:934" placeholder="SELECT id, n..estudiantes..." />
+            <marker date="1437952701773" expanded="true" signature="1399:1529" placeholder="SELECT g.id ..." />
+            <marker date="1437952701773" expanded="true" signature="1827:1989" placeholder="SELECT g.id ..grupos..." />
+          </folding>
         </state>
       </provider>
     </entry>

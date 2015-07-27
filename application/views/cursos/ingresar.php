@@ -54,7 +54,7 @@
             source: "<?php  echo base_url() ?>index.php/cursos/buscar",
             minLength: 2,
             select: function( event, ui ) {
-                buscardatos(ui.item.curso_id)
+                buscardatos(ui.item.id)
             }
         });
 

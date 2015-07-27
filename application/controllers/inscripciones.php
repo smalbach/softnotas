@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class cordinadores extends CI_Controller {
+class inscripciones extends CI_Controller {
     var $ses;
     function __construct(){
          parent::__construct();
 
-         $this->load->model('cordinadores_model');
+         $this->load->model('inscripciones_model');
          $newdata = array(
             'usuario'  => 'Jose TRuñon',
             'email'     => 'johndoe@some-site.com',
@@ -25,35 +25,35 @@ class cordinadores extends CI_Controller {
 
     function ingresar(){
         $data["ses"]=$this->ses;
-        $data["body"]='cordinadores/ingresar';
+        $data["body"]='inscripciones/ingresar';
         $this->load->view('includes/tpl_admin',$data);
     }
 
-    function buscarprofesor(){
+    function buscarestudiante(){
         $identificacion = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->cordinadores_model->buscarprofesor($identificacion));
+        echo json_encode($this->inscripciones_model->buscarestudiante($identificacion));
 
     }
 
-    function buscarprofesor2(){
+    function buscarestudiante2(){
         $identificacion2 = $this->input->get('id');
         header('Content-Type: application/json');
-        echo json_encode($this->cordinadores_model->buscarprofesor2($identificacion2));
+        echo json_encode($this->inscripciones_model->buscarestudiante2($identificacion2));
 
     }
 
     function buscargrupo(){
         $grupo = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->cordinadores_model->buscargrupo($grupo));
+        echo json_encode($this->inscripciones_model->buscargrupo($grupo));
 
     }
 
     function buscargrupo2(){
         $grupo2 = $this->input->get('id');
         header('Content-Type: application/json');
-        echo json_encode($this->cordinadores_model->buscargrupo2($grupo2));
+        echo json_encode($this->inscripciones_model->buscargrupo2($grupo2));
 
     }
 
@@ -61,10 +61,13 @@ class cordinadores extends CI_Controller {
         if($this->input->is_ajax_request()){
             $data = array(
                 'grupo_id' =>$this->input->post('grupo_id'),
-                'profesor_id' =>$this->input->post('profesor_id')
+                'estudiante_id' =>$this->input->post('estudiante_id'),
+                'valor' =>$this->input->post('valor'),
+                'descuento' =>$this->input->post('descuento')
+
             );
             header('Content-Type: application/json');
-            echo json_encode($this->cordinadores_model->guardar($data));
+            echo json_encode($this->inscripciones_model->guardar($data));
 
         }else{
         }

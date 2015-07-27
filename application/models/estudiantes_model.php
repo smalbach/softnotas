@@ -20,7 +20,7 @@ class estudiantes_model extends CI_Controller{
     function buscar($identificacion){
 
 
-        $query = $this->db->query("SELECT estudiante_id, identificacion as label , identificacion as value FROM estudiantes WHERE identificacion LIKE '%$identificacion%'");
+        $query = $this->db->query("SELECT id, identificacion as label , identificacion as value FROM estudiantes WHERE identificacion LIKE '%$identificacion%'");
 
 
         if($query->num_rows()>0){
@@ -39,7 +39,7 @@ class estudiantes_model extends CI_Controller{
 
     function buscar2($identificacion2){
 
-        $query = $this->db->query("SELECT estudiante_id, tipo_identificacion, nombres, apellidos, sexo, fecha_nacimiento, telefono, direccion FROM estudiantes WHERE estudiante_id = '$identificacion2'");
+        $query = $this->db->query("SELECT id, tipo_identificacion, nombres, apellidos, sexo, fecha_nacimiento, telefono, direccion FROM estudiantes WHERE id = '$identificacion2'");
 
 
         if($query->num_rows()>0){

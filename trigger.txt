@@ -1,0 +1,17 @@
+Delimiter //
+Create trigger usuario_estudiante after insert on estudiantes
+for each row
+begin
+insert into usuarios (login, password) VALUES (new.identificacion, md5(new.identificacion));
+end
+//
+delimiter ;
+
+Delimiter //
+Create trigger usuario_profesor after insert on profesores
+for each row
+begin
+insert into usuarios (login, password) VALUES (new.identificacion, md5(new.identificacion));
+end
+//
+delimiter ;
