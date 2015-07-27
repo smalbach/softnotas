@@ -15,9 +15,23 @@ CREATE DATABASE IF NOT EXISTS `softnotas` /*!40100 DEFAULT CHARACTER SET latin1 
 USE `softnotas`;
 
 
--- Volcando estructura para tabla softnotas.anio
-CREATE TABLE IF NOT EXISTS `anio` (
-  `id` int(4) NOT NULL,
+-- Volcando estructura para tabla softnotas.abonos
+CREATE TABLE IF NOT EXISTS `abonos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `estudiante_grupo_id` int(11) DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `valor` varchar(20) DEFAULT NULL,
+  `ususario_id` int(11) DEFAULT NULL,
+  `creado` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- La exportación de datos fue deseleccionada.
+
+
+-- Volcando estructura para tabla softnotas.anios
+CREATE TABLE IF NOT EXISTS `anios` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
   `anio` year(4) NOT NULL,
   `creado` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -28,10 +42,10 @@ CREATE TABLE IF NOT EXISTS `anio` (
 
 -- Volcando estructura para tabla softnotas.cordinadores
 CREATE TABLE IF NOT EXISTS `cordinadores` (
-  `cordinador_id` int(11) NOT NULL AUTO_INCREMENT,
-  `curso_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `grupo_id` int(11) NOT NULL,
   `profesor_id` int(11) NOT NULL,
-  PRIMARY KEY (`cordinador_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- La exportación de datos fue deseleccionada.
@@ -39,10 +53,10 @@ CREATE TABLE IF NOT EXISTS `cordinadores` (
 
 -- Volcando estructura para tabla softnotas.cursos
 CREATE TABLE IF NOT EXISTS `cursos` (
-  `curso_id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(100) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `curso` varchar(100) NOT NULL,
   `detalle` varchar(200) NOT NULL,
-  PRIMARY KEY (`curso_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- La exportación de datos fue deseleccionada.
@@ -51,8 +65,9 @@ CREATE TABLE IF NOT EXISTS `cursos` (
 -- Volcando estructura para tabla softnotas.estudiantes
 CREATE TABLE IF NOT EXISTS `estudiantes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` varchar(15) NOT NULL,
+  `usuario_id` int(11) NOT NULL DEFAULT '0',
   `identificacion` varchar(15) NOT NULL,
+  `tipo_identificacion` varchar(2) DEFAULT NULL,
   `nombres` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
   `sexo` varchar(1) NOT NULL,
@@ -67,24 +82,37 @@ CREATE TABLE IF NOT EXISTS `estudiantes` (
 -- La exportación de datos fue deseleccionada.
 
 
--- Volcando estructura para tabla softnotas.estudiantes_curso
-CREATE TABLE IF NOT EXISTS `estudiantes_curso` (
-  `estudiante_curso_id` int(11) NOT NULL AUTO_INCREMENT,
+-- Volcando estructura para tabla softnotas.estudiantes_grupo
+CREATE TABLE IF NOT EXISTS `estudiantes_grupo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `estudiante_id` int(11) NOT NULL,
-  `curso_id` int(11) NOT NULL,
-  PRIMARY KEY (`estudiante_curso_id`)
+  `grupo_id` int(11) NOT NULL,
+  `descuento` int(11) NOT NULL,
+  `total` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- La exportación de datos fue deseleccionada.
 
 
--- Volcando estructura para tabla softnotas.estudiantes_matricula
-CREATE TABLE IF NOT EXISTS `estudiantes_matricula` (
-  `estudiante_matricula_id` int(11) NOT NULL AUTO_INCREMENT,
-  `estudiante_curso_id` int(11) NOT NULL,
-  `porcentaje_beca` int(11) NOT NULL,
-  `valor_matricula` int(11) NOT NULL,
-  PRIMARY KEY (`estudiante_matricula_id`)
+-- Volcando estructura para tabla softnotas.grupos
+CREATE TABLE IF NOT EXISTS `grupos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `curso_id` int(11) NOT NULL,
+  `anio_id` int(11) NOT NULL,
+  `valor` int(11) NOT NULL,
+  `jornada_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- La exportación de datos fue deseleccionada.
+
+
+-- Volcando estructura para tabla softnotas.jornadas
+CREATE TABLE IF NOT EXISTS `jornadas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `jornada` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- La exportación de datos fue deseleccionada.
@@ -105,23 +133,14 @@ CREATE TABLE IF NOT EXISTS `logueos_user` (
 -- La exportación de datos fue deseleccionada.
 
 
--- Volcando estructura para tabla softnotas.matriculas
-CREATE TABLE IF NOT EXISTS `matriculas` (
-  `matricula_id` int(11) NOT NULL AUTO_INCREMENT,
-  `curso_id` int(11) NOT NULL,
-  `valor` int(11) NOT NULL,
-  PRIMARY KEY (`matricula_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- La exportación de datos fue deseleccionada.
-
-
 -- Volcando estructura para tabla softnotas.notas
 CREATE TABLE IF NOT EXISTS `notas` (
-  `nota_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `periodo_id` int(11) NOT NULL,
+  `estudiates_grupo_id` int(11) NOT NULL,
+  `profesor_id` int(11) NOT NULL,
   `nota` varchar(5) NOT NULL,
-  PRIMARY KEY (`nota_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- La exportación de datos fue deseleccionada.
@@ -131,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `notas` (
 CREATE TABLE IF NOT EXISTS `periodos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `anio_id` int(4) NOT NULL,
-  `nombre` varchar(1) NOT NULL,
+  `periodo` varchar(1) NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_final` date NOT NULL,
   `estado` enum('ACTIVO','INACTIVO') DEFAULT NULL,
@@ -145,11 +164,12 @@ CREATE TABLE IF NOT EXISTS `periodos` (
 -- Volcando estructura para tabla softnotas.profesores
 CREATE TABLE IF NOT EXISTS `profesores` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` varchar(15) NOT NULL,
+  `usuario_id` int(11) NOT NULL DEFAULT '0',
   `identificacion` varchar(15) NOT NULL,
+  `tipo_identificacion` varchar(2) NOT NULL,
   `nombres` varchar(50) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
-  `sexo` varchar(50) NOT NULL,
+  `sexo` varchar(1) NOT NULL,
   `fecha_nacimiento` date NOT NULL,
   `direccion` varchar(50) NOT NULL,
   `telefono` varchar(50) NOT NULL,
@@ -162,10 +182,10 @@ CREATE TABLE IF NOT EXISTS `profesores` (
 
 -- Volcando estructura para tabla softnotas.profesores_curso
 CREATE TABLE IF NOT EXISTS `profesores_curso` (
-  `profesores_curso_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `profesor_id` int(11) NOT NULL,
-  `curso_id` int(11) NOT NULL,
-  PRIMARY KEY (`profesores_curso_id`)
+  `grupo_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- La exportación de datos fue deseleccionada.
@@ -183,6 +203,26 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- La exportación de datos fue deseleccionada.
+
+
+-- Volcando estructura para disparador softnotas.usuario_estudiante
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `usuario_estudiante` AFTER INSERT ON `estudiantes` FOR EACH ROW begin
+insert into usuarios (login, password, permisos) VALUES (new.identificacion, md5(new.identificacion), 'estudiante');
+end//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
+
+
+-- Volcando estructura para disparador softnotas.usuario_profesor
+SET @OLDTMP_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_ENGINE_SUBSTITUTION';
+DELIMITER //
+CREATE TRIGGER `usuario_profesor` AFTER INSERT ON `profesores` FOR EACH ROW begin
+insert into usuarios (login, password, permisos) VALUES (new.identificacion, md5(new.identificacion), 'profesor');
+end//
+DELIMITER ;
+SET SQL_MODE=@OLDTMP_SQL_MODE;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

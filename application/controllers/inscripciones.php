@@ -62,7 +62,7 @@ class inscripciones extends CI_Controller {
             $data = array(
                 'grupo_id' =>$this->input->post('grupo_id'),
                 'estudiante_id' =>$this->input->post('estudiante_id'),
-                'valor' =>$this->input->post('valor'),
+                'total' =>$this->input->post('total'),
                 'descuento' =>$this->input->post('descuento')
 
             );
