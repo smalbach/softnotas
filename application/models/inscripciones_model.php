@@ -69,7 +69,7 @@ class inscripciones_model extends CI_Controller{
     function buscargrupo($grupo){
 
 
-        $query = $this->db->query("SELECT g.id AS id, c.curso as label , c.curso as value FROM grupos g, cursos c WHERE c.id = g.curso_id AND c.curso LIKE '%$grupo%'");
+        $query = $this->db->query("SELECT g.id AS id, c.curso as label , c.curso as value, j.jornada FROM grupos g, cursos c, jornadas j WHERE c.id = g.curso_id  AND g.jornada_id = j.id AND c.curso LIKE '%$grupo%'");
 
 
         if($query->num_rows()>0){

@@ -168,8 +168,17 @@
             minLength: 2,
             select: function( event, ui ) {
                 buscardatos_grupo(ui.item.id)
+            },
+            _renderItem: function( ul, item ) {
+                console.log(ul)
+
             }
-        });
+        }).data('ui-autocomplete')._renderItem = function(ul, item) {
+            return $('<li>')
+                .append('<a>' + item.label + '<br>' + item.jornada + '</a>')
+                .appendTo(ul);
+        }
+
 
         function buscardatos_grupo(id) {
             $.ajax({
@@ -225,8 +234,6 @@
     })
 
 </script>
-
-
 
 </body>
 </html>
