@@ -25,44 +25,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ingresar.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ingresar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/inscripciones/ingresar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.963636" vertical-offset="2491" max-vertical-offset="3876">
-              <caret line="182" column="28" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.51543945" vertical-offset="2881" max-vertical-offset="4063">
+              <caret line="195" column="21" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guardaractivo.php" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Mis programas/datagas/guardaractivo.php">
+      <file leaf-file-name="gastos.php" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Mis programas/laplaya/gastos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.807692" vertical-offset="47" max-vertical-offset="1938">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="2601">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="consultaordencorrectiva.php" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Mis programas/datagas/consultaordencorrectiva.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462" vertical-offset="765" max-vertical-offset="2890">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="80" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pagination_data5.php" pinned="false" current-in-tab="false">
-        <entry file="file://D:/Mis programas/datagas/pagination_data5.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1428">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-              <folding>
-                <marker date="1412208092000" expanded="true" signature="838:923" placeholder="select COD_M..mantenimientos..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -77,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inscripciones_model.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inscripciones_model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/inscripciones_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29276693" vertical-offset="969" max-vertical-offset="2142">
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="969" max-vertical-offset="2142">
               <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <marker date="1437952701773" expanded="true" signature="402:545" placeholder="SELECT id, i..." />
@@ -383,7 +361,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -430,13 +408,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery-1.11.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
@@ -798,43 +769,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Mis programas/datagas/guardaractivo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.807692" vertical-offset="47" max-vertical-offset="1938">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Mis programas/datagas/pagination_data5.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <marker date="1412208092000" expanded="true" signature="838:923" placeholder="select COD_M..mantenimientos..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Mis programas/datagas/consultaordencorrectiva.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462" vertical-offset="765" max-vertical-offset="2890">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="80" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/inscripciones/ingresar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.963636" vertical-offset="2491" max-vertical-offset="3876">
-          <caret line="182" column="28" selection-start-line="182" selection-start-column="28" selection-end-line="182" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/inscripciones_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29276693" vertical-offset="969" max-vertical-offset="2142">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="969" max-vertical-offset="2142">
           <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
             <marker date="1437952701773" expanded="true" signature="402:545" placeholder="SELECT id, i..." />
@@ -842,6 +779,48 @@
             <marker date="1437952701773" expanded="true" signature="1399:1529" placeholder="SELECT g.id ..." />
             <marker date="1437952701773" expanded="true" signature="1827:1989" placeholder="SELECT g.id ..grupos..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/datagas/guardaractivo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5315729" vertical-offset="47" max-vertical-offset="1938">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/datagas/consultaordencorrectiva.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4489093" vertical-offset="765" max-vertical-offset="2890">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="80" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/datagas/pagination_data5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13662457" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <marker date="1412208092000" expanded="true" signature="-1:-1" placeholder="select COD_M..mantenimientos..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Mis programas/laplaya/gastos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="2601">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/inscripciones/ingresar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51543945" vertical-offset="2881" max-vertical-offset="4063">
+          <caret line="195" column="21" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

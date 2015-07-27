@@ -115,6 +115,20 @@
         </div>
     </div><br>
 
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <label>Total a pagar</label>
+            <label for="total"></label>
+            <input
+                class="form-control"
+                id="total"
+                name="total"
+                type="text"
+                data-rule-required="true"
+                >
+        </div>
+    </div><br>
+
 
         <div class="form-group">
         <button
@@ -129,7 +143,6 @@
 <script>
     $(document).ready(function ({}) {
 
-        $("#descuento").keyup(function(){ calcular()})
 
         $( "#identificacion" ).autocomplete({
             source: "<?php  echo base_url() ?>index.php/inscripciones/buscarestudiante",
@@ -170,7 +183,7 @@
             });
         }
 
-        //$("#descuento").onkeyup(function() {calcular();});
+        $("#descuento").keyup(function(){ calcular()})
 
         function calcular(){
 
@@ -180,11 +193,9 @@
 
             total_descuento = valor - ((valor*descuento)/100);
 
-            $("#valor").val(total_descuento);
+            $("#total").val(total_descuento);
 
         }
-
-
 
 
         $("#inscripcion").validate({
