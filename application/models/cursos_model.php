@@ -18,7 +18,7 @@ class cursos_model extends CI_Controller{
     function buscar($curso){
 
 
-        $query = $this->db->query("SELECT id, nombre as label , nombre as value FROM cursos WHERE nombre LIKE '%$curso%'");
+        $query = $this->db->query("SELECT id, curso as label , curso as value FROM cursos WHERE curso LIKE '%$curso%'");
 
 
         if($query->num_rows()>0){
@@ -40,7 +40,7 @@ class cursos_model extends CI_Controller{
 
     function buscar2($curso2){
 
-        $query = $this->db->query("SELECT id, nombre, detalle FROM cursos WHERE id = '$curso2'");
+        $query = $this->db->query("SELECT id, curso, detalle FROM cursos WHERE id = '$curso2'");
 
 
         if($query->num_rows()>0){
@@ -49,7 +49,7 @@ class cursos_model extends CI_Controller{
 
             foreach ($query->result_array() as $row){
 
-                $curso->nombre = $row['nombre'];
+                $curso->curso = $row['curso'];
                 $curso->detalle = $row['detalle'];
 
             }

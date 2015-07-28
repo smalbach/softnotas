@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost:85/softnotas/';
+$config['base_url'] = 'http://localhost/softnotas/';
 
 /*
 |--------------------------------------------------------------------------

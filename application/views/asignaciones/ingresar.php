@@ -1,17 +1,16 @@
 
 <header>
     <div class="contenedor">
-        <h1><p><i>Inscripción del estudiante</i></p></h1>
+        <h1><p><i>Asignación de profesores</i></p></h1>
     </div>
 </header>
 <form
-    id="inscripcion"
-    name="inscripcion"
+    id="asignacion"
     >
 
         <div class="row">
             <div class="col-xs-12 col-md-12">
-                <h2>Datos del estudiante</h2>
+                <h2>Datos del profesor</h2>
             </div>
         </div><br>
 
@@ -27,8 +26,8 @@
                     data-rule-required="true"
                     >
                 <input
-                    id="estudiante_id"
-                    name="estudiante_id"
+                    id="profesor_id"
+                    name="profesor_id"
                     type="hidden"
                     >
             </div>
@@ -82,67 +81,7 @@
         </div>
     </div><br>
 
-    <div class="row">
-        <div class="col-xs-12 col-md-12">
-            <h2>Datos del costo</h2>
-        </div>
-    </div><br>
-
-    <div class="row">
-        <div class="col-xs-12 col-md-6">
-            <label>Valor</label>
-            <label for="valor"></label>
-            <input
-                class="form-control"
-                id="valor"
-                name="valor"
-                type="text"
-                data-rule-required="true"
-                >
-        </div>
-        <div class="col-xs-12 col-md-6">
-            <label>Descuento</label>
-            <label for="descuento"></label>
-            <input
-                class="form-control"
-                id="descuento"
-                name="descuento"
-                type="text"
-                data-rule-required="true"
-                placeholder="%"
-
-                >
-        </div>
-    </div><br>
-
-    <div class="row">
-        <div class="col-xs-12 col-md-6">
-            <label>Total a pagar</label>
-            <label for="total"></label>
-            <input
-                class="form-control"
-                id="total"
-                name="total"
-                type="text"
-                data-rule-required="true"
-                >
-        </div>
-        <div class="col-xs-12 col-md-6">
-            <label>Abono inicial</label>
-            <label for="abono_inicial"></label>
-            <input
-                class="form-control"
-                id="abono_inicial"
-                name="abono_inicial"
-                type="text"
-                value="0"
-                data-rule-required="true"
-                >
-        </div>
-    </div><br>
-
-
-        <div class="form-group">
+         <div class="form-group">
         <button
             type="submit"
             class="btn btn-primary">Guardar</button>
@@ -157,10 +96,10 @@
 
 
         $( "#identificacion" ).autocomplete({
-            source: "<?php  echo base_url() ?>index.php/inscripciones/buscarestudiante",
+            source: "<?php  echo base_url() ?>index.php/asignaciones/buscarprofesor",
             minLength: 2,
             select: function( event, ui ) {
-                buscar_estudiante(ui.item.id)
+                buscar_profesor(ui.item.id)
             },
 
             _renderItem: function( ul, item ) {
@@ -173,19 +112,19 @@
                 .appendTo(ul);
         }
 
-        function buscar_estudiante(id) {
+        function buscar_profesor(id) {
             $.ajax({
                 type: "GET",
-                url: "<?php  echo base_url() ?>index.php/inscripciones/buscarestudiante2?id=" + id,
+                url: "<?php  echo base_url() ?>index.php/asignaciones/buscarprofesor2?id=" + id,
                 dataType: 'json'
-            }).done(function (estudiante) {
-                $("#nombre").val(estudiante.nombre);
-                $("#estudiante_id").val(estudiante.id);
+            }).done(function (profesor) {
+                $("#nombre").val(profesor.nombre);
+                $("#profesor_id").val(profesor.id);
             });
         }
 
         $( "#grupo" ).autocomplete({
-            source: "<?php  echo base_url() ?>index.php/inscripciones/buscargrupo",
+            source: "<?php  echo base_url() ?>index.php/asignaciones/buscargrupo",
             minLength: 2,
             select: function( event, ui ) {
                 buscardatos_grupo(ui.item.id)
@@ -205,45 +144,30 @@
         function buscardatos_grupo(id) {
             $.ajax({
                 type: "GET",
-                url: "<?php  echo base_url() ?>index.php/inscripciones/buscargrupo2?id=" + id,
+                url: "<?php  echo base_url() ?>index.php/asignaciones/buscargrupo2?id=" + id,
                 dataType: 'json'
             }).done(function (grupo) {
                 $("#jornada").val(grupo.jornada);
                 $("#grupo_id").val(grupo.id);
-                $("#valor").val(grupo.valor);
             });
         }
 
-        $("#descuento").keyup(function(){ calcular()})
 
-        function calcular(){
-
-            var descuento = $("#descuento").val();
-            var valor = $("#valor").val();
-            var total_descuento;
-
-            total_descuento = valor - ((valor*descuento)/100);
-
-            $("#total").val(total_descuento);
-
-        }
-
-
-        $("#inscripcion").validate({
+        $("#asignacion").validate({
             submitHandler: function(form){
-                datosFormulario=$("#inscripcion").serialize();
+                datosFormulario=$("#asignacion").serialize();
 
                 $.ajax({
                     type: "POST",
-                    url:"<?php  echo base_url() ?>index.php/inscripciones/guardar",
+                    url:"<?php  echo base_url() ?>index.php/asignaciones/guardar",
                     data:datosFormulario,
                     dataType: 'json',
                     async:false,
                     success: function (data) {
-                        alert("La inscripcion se registro correctamente");
+                        alert("El profesor se asigno correctamente");
                     },
                     error: function(data){
-                        alert("Error al registrar la inscripcion");
+                        alert("Error al asignar el profesor");
                     }
 
 

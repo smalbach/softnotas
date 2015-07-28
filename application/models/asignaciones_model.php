@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class inscripciones_model extends CI_Controller{
+class asignaciones_model extends CI_Controller{
 
     function __construct(){
         parent::__construct();
@@ -10,15 +10,15 @@ class inscripciones_model extends CI_Controller{
 
     function guardar($data){
 
-        return $this->db->insert('estudiantes_grupo',$data);
+        return $this->db->insert('profesores_grupo',$data);
 
     }
 
-    //busqueda de estudiantes
-    function buscarestudiante($identificacion){
+    //busqueda de profesores
+    function buscarprofesor($identificacion){
 
 
-        $query = $this->db->query("SELECT id, identificacion as label , identificacion as value, concat_ws(' ', nombres, apellidos) as nombre FROM estudiantes WHERE identificacion LIKE '%$identificacion%'");
+        $query = $this->db->query("SELECT id, identificacion as label , identificacion as value, concat_ws(' ', nombres, apellidos) as nombre FROM profesores WHERE identificacion LIKE '%$identificacion%'");
 
 
         if($query->num_rows()>0){
@@ -39,19 +39,19 @@ class inscripciones_model extends CI_Controller{
 
     }
 
-    function buscarestudiante2($identificacion2){
+    function buscarprofesor2($identificacion2){
 
-        $query = $this->db->query("SELECT id, nombres, apellidos FROM estudiantes WHERE id = '$identificacion2'");
+        $query = $this->db->query("SELECT id, nombres, apellidos FROM profesores WHERE id = '$identificacion2'");
 
 
         if($query->num_rows()>0){
 
-            $estudiante = new stdClass();
+            $profesor = new stdClass();
 
             foreach ($query->result_array() as $row){
 
-                $estudiante->id = $row['id'];
-                $estudiante->nombre = $row['nombres'].' '.$row['apellidos'];
+                $profesor->id = $row['id'];
+                $profesor->nombre = $row['nombres'].' '.$row['apellidos'];
 
             }
 
@@ -61,7 +61,7 @@ class inscripciones_model extends CI_Controller{
 
         }
 
-        return  $estudiante;
+        return  $profesor;
     }
 
 

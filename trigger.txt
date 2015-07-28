@@ -15,3 +15,12 @@ insert into usuarios (login, password) VALUES (new.identificacion, md5(new.ident
 end
 //
 delimiter ;
+
+Delimiter //
+Create trigger abono_inicial after insert on estudiantes_grupo
+for each row
+begin
+insert into abonos (estudiante_grupo_id, fecha, abono) VALUES (new.id, CURDATE(), new.abono_inicial);
+end
+//
+delimiter ;

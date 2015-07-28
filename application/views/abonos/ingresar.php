@@ -1,12 +1,11 @@
 
 <header>
     <div class="contenedor">
-        <h1><p><i>Inscripción del estudiante</i></p></h1>
+        <h1><p><i>Abonos a cartera</i></p></h1>
     </div>
 </header>
 <form
-    id="inscripcion"
-    name="inscripcion"
+    id="abonos"
     >
 
         <div class="row">
@@ -27,8 +26,8 @@
                     data-rule-required="true"
                     >
                 <input
-                    id="estudiante_id"
-                    name="estudiante_id"
+                    id="estudiante_grupo_id"
+                    name="estudiante_grupo_id"
                     type="hidden"
                     >
             </div>
@@ -54,19 +53,14 @@
 
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <label>Curso</label>
-            <label for="grupo"></label>
+            <label>Grupo</label>
+            <label for="curso"></label>
             <input
                 class="form-control"
-                id="grupo"
-                name="grupo"
+                id="curso"
+                name="curso"
                 type="text"
                 data-rule-required="true"
-                >
-            <input
-                id="grupo_id"
-                name="grupo_id"
-                type="hidden"
                 >
         </div>
         <div class="col-xs-12 col-md-6">
@@ -84,63 +78,60 @@
 
     <div class="row">
         <div class="col-xs-12 col-md-12">
-            <h2>Datos del costo</h2>
+            <h2>Datos de cartera</h2>
         </div>
     </div><br>
 
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <label>Valor</label>
-            <label for="valor"></label>
+            <label>Valor en mora</label>
+            <label for="mora"></label>
             <input
                 class="form-control"
-                id="valor"
-                name="valor"
+                id="mora"
+                name="mora"
                 type="text"
                 data-rule-required="true"
                 >
         </div>
         <div class="col-xs-12 col-md-6">
-            <label>Descuento</label>
-            <label for="descuento"></label>
+            <label>Abono</label>
+            <label for="abono"></label>
             <input
                 class="form-control"
-                id="descuento"
-                name="descuento"
+                id="abono"
+                name="abono"
                 type="text"
                 data-rule-required="true"
-                placeholder="%"
-
                 >
         </div>
     </div><br>
+
 
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <label>Total a pagar</label>
-            <label for="total"></label>
+            <label>Saldo parcial</label>
+            <label for="saldo"></label>
             <input
                 class="form-control"
-                id="total"
-                name="total"
+                id="saldo"
+                name="saldo"
                 type="text"
                 data-rule-required="true"
                 >
         </div>
         <div class="col-xs-12 col-md-6">
-            <label>Abono inicial</label>
-            <label for="abono_inicial"></label>
+            <label>Fecha</label>
+            <label for="fecha"></label>
             <input
                 class="form-control"
-                id="abono_inicial"
-                name="abono_inicial"
+                id="fecha"
+                name="fecha"
                 type="text"
-                value="0"
                 data-rule-required="true"
                 >
         </div>
     </div><br>
-
 
         <div class="form-group">
         <button
@@ -157,7 +148,7 @@
 
 
         $( "#identificacion" ).autocomplete({
-            source: "<?php  echo base_url() ?>index.php/inscripciones/buscarestudiante",
+            source: "<?php  echo base_url() ?>index.php/abonos/buscarestudiante",
             minLength: 2,
             select: function( event, ui ) {
                 buscar_estudiante(ui.item.id)
@@ -169,81 +160,62 @@
 
         }).data('ui-autocomplete')._renderItem = function(ul, item) {
             return $('<li>')
-                .append('<a>' + item.label + ' | ' + item.nombre + '</a>')
+                .append('<a>' + item.label + ' | ' + item.nombre + ' <br> ' + item.curso + ' | ' + item.jornada +'</a>')
                 .appendTo(ul);
         }
 
         function buscar_estudiante(id) {
             $.ajax({
                 type: "GET",
-                url: "<?php  echo base_url() ?>index.php/inscripciones/buscarestudiante2?id=" + id,
+                url: "<?php
+                  echo base_url() ?>index.php/abonos/buscarestudiante2?id=" + id,
                 dataType: 'json'
             }).done(function (estudiante) {
                 $("#nombre").val(estudiante.nombre);
-                $("#estudiante_id").val(estudiante.id);
+                $("#curso").val(estudiante.curso);
+                $("#jornada").val(estudiante.jornada);
+                $("#mora").val(estudiante.mora);
+                $("#estudiante_grupo_id").val(estudiante.id);
             });
         }
 
-        $( "#grupo" ).autocomplete({
-            source: "<?php  echo base_url() ?>index.php/inscripciones/buscargrupo",
-            minLength: 2,
-            select: function( event, ui ) {
-                buscardatos_grupo(ui.item.id)
-            },
+        $("#fecha").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1900:{{Date('Y')}}",
+            dateFormat: "yy/mm/dd"
+        });
 
-            _renderItem: function( ul, item ) {
-                console.log(ul)
-            }
-
-        }).data('ui-autocomplete')._renderItem = function(ul, item) {
-            return $('<li>')
-                .append('<a>' + item.label + ' | ' + item.jornada + '</a>')
-                .appendTo(ul);
-        }
-
-
-        function buscardatos_grupo(id) {
-            $.ajax({
-                type: "GET",
-                url: "<?php  echo base_url() ?>index.php/inscripciones/buscargrupo2?id=" + id,
-                dataType: 'json'
-            }).done(function (grupo) {
-                $("#jornada").val(grupo.jornada);
-                $("#grupo_id").val(grupo.id);
-                $("#valor").val(grupo.valor);
-            });
-        }
-
-        $("#descuento").keyup(function(){ calcular()})
+        $("#abono").keyup(function(){ calcular()})
 
         function calcular(){
 
-            var descuento = $("#descuento").val();
-            var valor = $("#valor").val();
-            var total_descuento;
+            var mora = $("#mora").val();
+            var abono = $("#abono").val();
+            var saldo;
 
-            total_descuento = valor - ((valor*descuento)/100);
+            saldo = mora - abono;
 
-            $("#total").val(total_descuento);
+            $("#saldo").val(saldo);
 
         }
 
 
-        $("#inscripcion").validate({
+        $("#abonos").validate({
             submitHandler: function(form){
-                datosFormulario=$("#inscripcion").serialize();
+                datosFormulario=$("#abonos").serialize();
 
                 $.ajax({
                     type: "POST",
-                    url:"<?php  echo base_url() ?>index.php/inscripciones/guardar",
+                    url:"<?php  echo base_url() ?>index.php/abonos/guardar",
                     data:datosFormulario,
                     dataType: 'json',
                     async:false,
                     success: function (data) {
-                        alert("La inscripcion se registro correctamente");
+                        alert("El abono se registro correctamente");
                     },
                     error: function(data){
-                        alert("Error al registrar la inscripcion");
+                        alert("Error al registrar el abono");
                     }
 
 

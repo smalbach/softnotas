@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class inscripciones extends CI_Controller {
+class asignaciones extends CI_Controller {
     var $ses;
     function __construct(){
          parent::__construct();
 
-         $this->load->model('inscripciones_model');
+         $this->load->model('asignaciones_model');
          $newdata = array(
             'usuario'  => 'Jose TRuñon',
             'email'     => 'johndoe@some-site.com',
@@ -25,35 +25,35 @@ class inscripciones extends CI_Controller {
 
     function ingresar(){
         $data["ses"]=$this->ses;
-        $data["body"]='inscripciones/ingresar';
+        $data["body"]='asignaciones/ingresar';
         $this->load->view('includes/tpl_admin',$data);
     }
 
-    function buscarestudiante(){
+    function buscarprofesor(){
         $identificacion = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->inscripciones_model->buscarestudiante($identificacion));
+        echo json_encode($this->asignaciones_model->buscarprofesor($identificacion));
 
     }
 
-    function buscarestudiante2(){
+    function buscarprofesor2(){
         $identificacion2 = $this->input->get('id');
         header('Content-Type: application/json');
-        echo json_encode($this->inscripciones_model->buscarestudiante2($identificacion2));
+        echo json_encode($this->asignaciones_model->buscarprofesor2($identificacion2));
 
     }
 
     function buscargrupo(){
         $grupo = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->inscripciones_model->buscargrupo($grupo));
+        echo json_encode($this->asignaciones_model->buscargrupo($grupo));
 
     }
 
     function buscargrupo2(){
         $grupo2 = $this->input->get('id');
         header('Content-Type: application/json');
-        echo json_encode($this->inscripciones_model->buscargrupo2($grupo2));
+        echo json_encode($this->asignaciones_model->buscargrupo2($grupo2));
 
     }
 
@@ -61,14 +61,10 @@ class inscripciones extends CI_Controller {
         if($this->input->is_ajax_request()){
             $data = array(
                 'grupo_id' =>$this->input->post('grupo_id'),
-                'estudiante_id' =>$this->input->post('estudiante_id'),
-                'total' =>$this->input->post('total'),
-                'descuento' =>$this->input->post('descuento'),
-                'abono_inicial' =>$this->input->post('abono_inicial')
-
+                'profesor_id' =>$this->input->post('profesor_id')
             );
             header('Content-Type: application/json');
-            echo json_encode($this->inscripciones_model->guardar($data));
+            echo json_encode($this->asignaciones_model->guardar($data));
 
         }else{
         }

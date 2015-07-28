@@ -20,7 +20,7 @@ class estudiantes_model extends CI_Controller{
     function buscar($identificacion){
 
 
-        $query = $this->db->query("SELECT id, identificacion as label , identificacion as value FROM estudiantes WHERE identificacion LIKE '%$identificacion%'");
+        $query = $this->db->query("SELECT id, identificacion as label , identificacion as value, concat_ws(' ', nombres, apellidos) as nombre FROM estudiantes WHERE identificacion LIKE '%$identificacion%'");
 
 
         if($query->num_rows()>0){

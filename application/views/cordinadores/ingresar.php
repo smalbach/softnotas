@@ -100,11 +100,20 @@
             source: "<?php  echo base_url() ?>index.php/cordinadores/buscarprofesor",
             minLength: 2,
             select: function( event, ui ) {
-                buscardatos_profesor(ui.item.id)
-            }
-        });
+                buscardatos_estudiatne(ui.item.id)
+            },
 
-        function buscardatos_profesor(id) {
+            _renderItem: function( ul, item ) {
+                console.log(ul)
+            }
+
+        }).data('ui-autocomplete')._renderItem = function(ul, item) {
+            return $('<li>')
+                .append('<a>' + item.label + ' | ' + item.nombre + '</a>')
+                .appendTo(ul);
+        }
+
+        function buscardatos_estudiatne(id) {
             $.ajax({
                 type: "GET",
                 url: "<?php  echo base_url() ?>index.php/cordinadores/buscarprofesor2?id=" + id,
@@ -116,12 +125,21 @@
         }
 
         $( "#grupo" ).autocomplete({
-            source: "<?php  echo base_url() ?>index.php/cordinadores/buscargrupo",
+            source: "<?php  echo base_url() ?>index.php/inscripciones/buscargrupo",
             minLength: 2,
             select: function( event, ui ) {
                 buscardatos_grupo(ui.item.id)
+            },
+
+            _renderItem: function( ul, item ) {
+                console.log(ul)
             }
-        });
+
+        }).data('ui-autocomplete')._renderItem = function(ul, item) {
+            return $('<li>')
+                .append('<a>' + item.label + ' - ' + item.jornada + '</a>')
+                .appendTo(ul);
+        }
 
         function buscardatos_grupo(id) {
             $.ajax({

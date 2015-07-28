@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class cursos extends CI_Controller {
+class abonos extends CI_Controller {
     var $ses;
     function __construct(){
          parent::__construct();
 
-         $this->load->model('cursos_model');
+         $this->load->model('abonos_model');
          $newdata = array(
             'usuario'  => 'Jose TRuñon',
             'email'     => 'johndoe@some-site.com',
@@ -25,32 +25,33 @@ class cursos extends CI_Controller {
 
     function ingresar(){
         $data["ses"]=$this->ses;
-        $data["body"]='cursos/ingresar';
+        $data["body"]='abonos/ingresar';
         $this->load->view('includes/tpl_admin',$data);
     }
 
-    function buscar(){
-        $curso = $this->input->get('term');
+    function buscarestudiante(){
+        $identificacion = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->cursos_model->buscar($curso));
+        echo json_encode($this->abonos_model->buscarestudiante($identificacion));
 
     }
 
-    function buscar2(){
-        $curso2 = $this->input->get('id');
+    function buscarestudiante2(){
+        $identificacion2 = $this->input->get('id');
         header('Content-Type: application/json');
-        echo json_encode($this->cursos_model->buscar2($curso2));
+        echo json_encode($this->abonos_model->buscarestudiante2($identificacion2));
 
     }
 
     function guardar(){
         if($this->input->is_ajax_request()){
             $data = array(
-                'curso' =>$this->input->post('curso'),
-                'detalle' =>$this->input->post('detalle')
+                'estudiante_grupo_id' =>$this->input->post('estudiante_grupo_id'),
+                'fecha' =>$this->input->post('fecha'),
+                'abono' =>$this->input->post('abono'),
             );
             header('Content-Type: application/json');
-            echo json_encode($this->cursos_model->guardar($data));
+            echo json_encode($this->abonos_model->guardar($data));
 
         }else{
         }

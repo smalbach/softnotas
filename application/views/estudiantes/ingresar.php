@@ -130,11 +130,20 @@
             source: "<?php  echo base_url() ?>index.php/estudiantes/buscar",
             minLength: 2,
             select: function( event, ui ) {
-                buscardatos(ui.item.id)
-            }
-        });
+                buscar_estudiante(ui.item.id)
+            },
 
-        function buscardatos(id) {
+            _renderItem: function( ul, item ) {
+                console.log(ul)
+            }
+
+        }).data('ui-autocomplete')._renderItem = function(ul, item) {
+            return $('<li>')
+                .append('<a>' + item.label + ' | ' + item.nombre + '</a>')
+                .appendTo(ul);
+        }
+
+        function buscar_estudiante(id) {
             $.ajax({
                 type: "GET",
                 url: "<?php  echo base_url() ?>index.php/estudiantes/buscar2?id=" + id,

@@ -10,12 +10,12 @@
 
         <div class="row">
             <div class="col-xs-12 col-md-12">
-                <label>Nombre</label>
-                <label for="nombre"></label>
+                <label>Curso</label>
+                <label for="curso"></label>
                 <input
                     class="form-control"
-                    id="nombre"
-                    name="nombre"
+                    id="curso"
+                    name="curso"
                     type="text"
                     data-rule-required="true"
                     >
