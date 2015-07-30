@@ -141,6 +141,20 @@
         </div>
     </div><br>
 
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <label>Fecha</label>
+            <label for="fecha"></label>
+            <input
+                class="form-control"
+                name="fecha"
+                id="fecha"
+                type="text"
+                data-rule-required="true"
+                >
+        </div>
+    </div><br>
+
 
         <div class="form-group">
         <button
@@ -227,6 +241,13 @@
             $("#total").val(total_descuento);
 
         }
+
+        $("#fecha").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "1900:{{Date('Y')}}",
+            dateFormat: "yy/mm/dd"
+        });
 
 
         $("#inscripcion").validate({

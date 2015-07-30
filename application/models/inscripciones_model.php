@@ -4,13 +4,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class inscripciones_model extends CI_Controller{
 
     function __construct(){
+
         parent::__construct();
 
     }
 
     function guardar($data){
 
-        return $this->db->insert('estudiantes_grupo',$data);
+        $this->db->insert('estudiantes_grupo',$data);
+
+        $estudiante_grupo_id = $this->db->insert_id();
+
+        $this->db->insert('abonos',array('estudiante_grupo_id'=>$estudiante_grupo_id,'fecha'=>$data['fecha'],'abono'=>$data['abono_inicial']));
 
     }
 

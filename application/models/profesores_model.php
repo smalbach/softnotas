@@ -10,7 +10,8 @@ class profesores_model extends CI_Controller{
 
     function guardar($data){
 
-        return $this->db->insert('profesores',$data);
+        $this->db->insert('profesores',$data);
+        $this->db->insert('usuarios',array('login'=>$data['identificacion'],'password'=>md5($data['identificacion']),'permiso_id'=>'3'));
 
     }
 

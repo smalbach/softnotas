@@ -64,6 +64,7 @@ class inscripciones extends CI_Controller {
                 'estudiante_id' =>$this->input->post('estudiante_id'),
                 'total' =>$this->input->post('total'),
                 'descuento' =>$this->input->post('descuento'),
+                'fecha' =>$this->input->post('fecha'),
                 'abono_inicial' =>$this->input->post('abono_inicial')
 
             );

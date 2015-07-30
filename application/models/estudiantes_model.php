@@ -10,7 +10,8 @@ class estudiantes_model extends CI_Controller{
 
     function guardar($data){
 
-        return $this->db->insert('estudiantes',$data);
+        $this->db->insert('estudiantes',$data);
+        $this->db->insert('usuarios',array('login'=>$data['identificacion'],'password'=>md5($data['identificacion']),'permiso_id'=>'2'));
 
     }
 
