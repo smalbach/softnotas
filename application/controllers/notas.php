@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class cursos extends CI_Controller {
+class notas extends CI_Controller {
     var $ses;
     function __construct(){
          parent::__construct();
 
-         $this->load->model('cursos_model');
+         $this->load->model('notas_model');
          $newdata = array(
             'usuario'  => 'Jose TRuñon',
             'email'     => 'johndoe@some-site.com',
@@ -25,21 +25,21 @@ class cursos extends CI_Controller {
 
     function ingresar(){
         $data["ses"]=$this->ses;
-        $data["body"]='cursos/ingresar';
+        $data["body"]='notas/ingresar';
         $this->load->view('includes/tpl_admin',$data);
     }
 
     function buscar(){
         $curso = $this->input->get('term');
         header('Content-Type: application/json');
-        echo json_encode($this->cursos_model->buscar($curso));
+        echo json_encode($this->notas_model->buscar($curso));
 
     }
 
     function buscar2(){
         $curso2 = $this->input->get('id');
         header('Content-Type: application/json');
-        echo json_encode($this->cursos_model->buscar2($curso2));
+        echo json_encode($this->notas_model->buscar2($curso2));
 
     }
 
@@ -50,37 +50,11 @@ class cursos extends CI_Controller {
                 'detalle' =>$this->input->post('detalle')
             );
             header('Content-Type: application/json');
-            echo json_encode($this->cursos_model->guardar($data));
+            echo json_encode($this->notas_model->guardar($data));
 
         }else{
         }
     }
-
-
-    function actualizar(){
-        if($this->input->is_ajax_request()){
-            $id=$this->input->post('id');
-            $data = array(
-                'curso' =>$this->input->post('curso'),
-                'detalle' =>$this->input->post('detalle')
-            );
-            header('Content-Type: application/json');
-            echo json_encode($this->cursos_model->actualizar($data,$id));
-
-        }else{
-        }
-    }
-
-    function buscar_todos(){
-        if($this->input->is_ajax_request()){
-
-            header('Content-Type: application/json');
-            echo json_encode($this->cursos_model->buscar_todos());
-        }else{
-        }
-    }
-
-
 
 }
 

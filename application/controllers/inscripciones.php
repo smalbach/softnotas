@@ -29,6 +29,11 @@ class inscripciones extends CI_Controller {
         $this->load->view('includes/tpl_admin',$data);
     }
 
+    function nuevo(){
+        $data["ses"]=$this->ses;
+        $data["body"]='inscripciones/ingresar';
+    }
+
     function buscarestudiante(){
         $identificacion = $this->input->get('term');
         header('Content-Type: application/json');

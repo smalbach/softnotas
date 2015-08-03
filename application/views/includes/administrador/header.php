@@ -16,6 +16,12 @@
     <script src="<?php echo base_url() ?>js/bootstrap.min.js"></script>
 
     <script src="<?php echo base_url() ?>js/jquery-ui-1.11.1.custom/jquery-ui-1.11.1.custom/jquery-ui.js"></script>
+    <script src="<?php echo base_url() ?>js/noty/jquery.noty.packaged.min.js"></script>
+
+    <script>
+        var opnoty = {layout:'topRight',type:'',text:'',dismissQueue:true,maxVisible:3,timeout:2000};
+    </script>
+
 
 
 

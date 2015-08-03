@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class cursos_model extends CI_Controller{
+class notas_model extends CI_Controller{
 
     function __construct(){
         parent::__construct();
@@ -10,7 +10,7 @@ class cursos_model extends CI_Controller{
 
     function guardar($data){
 
-        return $this->db->insert('cursos',$data);
+        return $this->db->insert('notas',$data);
 
     }
 
@@ -18,7 +18,7 @@ class cursos_model extends CI_Controller{
     function buscar($curso){
 
 
-        $query = $this->db->query("SELECT id, curso as label , curso as value FROM cursos WHERE curso LIKE '%$curso%'");
+        $query = $this->db->query("SELECT id, curso as label , curso as value FROM notas WHERE curso LIKE '%$curso%'");
 
 
         if($query->num_rows()>0){
@@ -37,20 +37,10 @@ class cursos_model extends CI_Controller{
         return  $data;
     }
 
-    function actualizar($data,$id){
-
-
-        $this->db->where('id', $id);
-        return $this->db->update('cursos', $data);
-
-    }
-
-
-
 
     function buscar2($curso2){
 
-        $query = $this->db->query("SELECT id, curso, detalle FROM cursos WHERE id = '$curso2'");
+        $query = $this->db->query("SELECT id, curso, detalle FROM notas WHERE id = '$curso2'");
 
 
         if($query->num_rows()>0){
@@ -73,21 +63,6 @@ class cursos_model extends CI_Controller{
         return  $curso;
 
     }
-    function buscar_todos(){
-
-        $query = $this->db->query("SELECT id, curso, detalle FROM cursos limit 100");
-
-        $data="";
-        if($query->num_rows()>0){
-            foreach ($query->result_array() as $row){
-                $data[]=$row;
-            }
-        }else{
-            return false;
-        }
-        return  $data;
-    }
-
 
 
 }

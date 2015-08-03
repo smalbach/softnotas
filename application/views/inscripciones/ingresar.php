@@ -18,6 +18,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <label>Identificacion</label>
+                <label><img id="nuevo_estudiante" src="<?php  echo base_url() ?>/imagenes/icono.png" width="25" height="25" "></label>
                 <label for="identificacion"></label>
                 <input
                     class="form-control"
@@ -91,17 +92,22 @@
     <div class="row">
         <div class="col-xs-12 col-md-6">
             <label>Valor</label>
-            <label for="valor"></label>
-            <input
-                class="form-control"
-                id="valor"
-                name="valor"
-                type="text"
-                data-rule-required="true"
-                >
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <label for="valor"></label>
+                <input
+                    class="form-control"
+                    id="valor"
+                    name="valor"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
         </div>
         <div class="col-xs-12 col-md-6">
             <label>Descuento</label>
+            <div class="input-group">
+            <span class="input-group-addon">%</span>
             <label for="descuento"></label>
             <input
                 class="form-control"
@@ -109,35 +115,41 @@
                 name="descuento"
                 type="text"
                 data-rule-required="true"
-                placeholder="%"
-
                 >
+            </div>
         </div>
+
     </div><br>
 
     <div class="row">
         <div class="col-xs-12 col-md-6">
-            <label>Total a pagar</label>
-            <label for="total"></label>
-            <input
-                class="form-control"
-                id="total"
-                name="total"
-                type="text"
-                data-rule-required="true"
-                >
+            <label>Total</label>
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <label for="total"></label>
+                <input
+                    class="form-control"
+                    id="total"
+                    name="total"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
         </div>
         <div class="col-xs-12 col-md-6">
             <label>Abono inicial</label>
-            <label for="abono_inicial"></label>
-            <input
-                class="form-control"
-                id="abono_inicial"
-                name="abono_inicial"
-                type="text"
-                value="0"
-                data-rule-required="true"
-                >
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <label for="abono_inicial"></label>
+                <input
+                    class="form-control"
+                    id="abono_inicial"
+                    name="abono_inicial"
+                    type="text"
+                    data-rule-required="true"
+                    value="0"
+                    >
+            </div>
         </div>
     </div><br>
 
@@ -159,16 +171,141 @@
         <div class="form-group">
         <button
             type="submit"
-            class="btn btn-primary">Guardar</button>
+            class="btn btn-primary"
+            >
+            Guardar
+        </button>
         </div>
 </div>
 
 </form>
 
 
+<div id="dialogo_estudiante" >
+<form id="formulario_estudiante">
+
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <label>Identificación</label>
+                <label for="identificacion"></label>
+                <input
+                    class="form-control"
+                    id="identificacion"
+                    name="identificacion"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <label>Tipo Identificación</label>
+                <label for="tipo_identificacion"></label>
+                <select
+                    class="form-control"
+                    name="tipo_identificacion"
+                    id="tipo_identificacion"
+                    >
+                    <option selected="selected"></option>
+                    <option value="CC">CEDULA DE CIUDADANIA</option>
+                    <option value="TI">TARJETA DE IDENTIDAD</option>
+                </select>
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <label>Nombres</label>
+                <label for="nombres"></label>
+                <input
+                    class="form-control"
+                    id="nombres"
+                    name="nombres"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <label>Apellidos</label>
+                <label for="apellidos"></label>
+                <input
+                    class="form-control"
+                    name="apellidos"
+                    id="apellidos"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <label>Sexo</label>
+                <label for="sexo"></label>
+                <select
+                    class="form-control"
+                    name="sexo"
+                    id="sexo"
+                    >
+                    <option selected="selected"></option>
+                    <option value="M">MASCULINO</option>
+                    <option value="F">FEMENINO</option>
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <label>Fecha de nacimiento</label>
+                <label for="fecha_nacimiento"></label>
+                <input
+                    class="form-control"
+                    name="fecha_nacimiento"
+                    id="fecha_nacimiento"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <label>Dirección</label>
+                <label for="direccion"></label>
+                <input
+                    class="form-control"
+                    name="direccion"
+                    id="direccion"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <label>Telefono</label>
+                <label for="telefono"></label>
+                <input
+                    class="form-control"
+                    name="telefono"
+                    id="telefono"
+                    type="text"
+                    data-rule-required="true"
+                    >
+            </div>
+        </div><br>
+
+        <div class="form-group">
+            <button
+                type="submit"
+                class="btn btn-primary"
+                >Guardar
+            </button>
+        </div>
+</form>
+</div>
+
+
 <script>
     $(document).ready(function ({}) {
 
+
+
+        <!-- Autocompletar del estudiante -->
 
         $( "#identificacion" ).autocomplete({
             source: "<?php  echo base_url() ?>index.php/inscripciones/buscarestudiante",
@@ -197,6 +334,8 @@
                 $("#estudiante_id").val(estudiante.id);
             });
         }
+
+        <!-- Fin autocompletar del estudiante -->
 
         $( "#grupo" ).autocomplete({
             source: "<?php  echo base_url() ?>index.php/inscripciones/buscargrupo",
@@ -228,6 +367,9 @@
             });
         }
 
+
+        <!-- Calculo del descuento del curso -->
+
         $("#descuento").keyup(function(){ calcular()})
 
         function calcular(){
@@ -248,6 +390,36 @@
             yearRange: "1900:{{Date('Y')}}",
             dateFormat: "yy/mm/dd"
         });
+
+        <!-- funciones estudiante -->
+
+        $("#nuevo_estudiante").click(function() {
+
+            nuevo_estudiante()
+
+        });
+
+        function  nuevo_estudiante(){
+
+            $("#dialogo_estudiante").dialog( "open" );
+
+        }
+
+        $("#dialogo_estudiante").dialog({
+            autoOpen: false,
+            width: 700,
+            height: 450,
+            title: "Inscripción del estudiante",
+            show: {
+                effect: "blind",
+                duration: 1000
+            },
+            hide: {
+                effect: "explode",
+                duration: 1000
+            }
+        });
+
 
 
         $("#inscripcion").validate({
@@ -273,6 +445,33 @@
             }
 
         });
+
+
+        $("#formulario_estudiante").validate({
+            submitHandler: function(form){
+                datosFormulario=$("#formulario_estudiante").serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url:"<?php  echo base_url() ?>index.php/estudiantes/guardar",
+                    data:datosFormulario,
+                    dataType: 'json',
+                    async:false,
+                    success: function (data) {
+                        alert("El estudiante se registro correctamente");
+                    },
+                    error: function(data){
+                        alert("Error al registrar el estudiante");
+                    }
+
+
+                })
+
+            }
+
+        });
+
+
 
     })
 
